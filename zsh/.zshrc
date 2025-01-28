@@ -86,3 +86,4 @@ export EDITOR="vim"
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 export PATH=$PATH:$HOME/venv/bin
+export PATH=$PATH:$HOME/.local/bin
