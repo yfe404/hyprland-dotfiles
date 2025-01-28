@@ -82,7 +82,7 @@ bindkey -M visual '^[[P' vi-delete
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 # Env
-export EDITOR="vim"
+export EDITOR="nvim"
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 export PATH=$PATH:$HOME/venv/bin
