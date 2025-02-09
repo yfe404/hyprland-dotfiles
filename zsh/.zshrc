@@ -83,7 +83,11 @@ source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/de
 
 # Env
 export EDITOR="nvim"
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 export PATH=$PATH:$HOME/venv/bin
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/kitty.app/bin
+
+source ~/.profile
+alias mini='~/Documents/mini-moulinette/mini-moul.sh'
+eval "$(starship init zsh)"
