@@ -1,3 +1,9 @@
 #!/bin/sh
+# List torrents from the transmission daemon
+# Requires: TRANSMISSION_HOST, TRANSMISSION_USER env vars and password in pass
 
-transmission-remote 192.168.191.33:9091 -n jellyfin:$(pass netflix/transmission/jellyin) -l 
+: "${TRANSMISSION_HOST:?Set TRANSMISSION_HOST (e.g., 192.168.1.100:9091)}"
+: "${TRANSMISSION_USER:?Set TRANSMISSION_USER}"
+: "${TRANSMISSION_PASS_PATH:=transmission/password}"
+
+transmission-remote "$TRANSMISSION_HOST" -n "$TRANSMISSION_USER:$(pass "$TRANSMISSION_PASS_PATH")" -l

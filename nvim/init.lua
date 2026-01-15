@@ -9,7 +9,7 @@ vim.g.mapleader = " "
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
     vim.fn.system({
         "git",
         "clone",
@@ -41,11 +41,37 @@ require("nvim-treesitter.configs").setup({
 	indent = {enable = true},
 })
 
-require("catppuccin").setup(
-	{
-		flavour = "mocha"
-	}
-)	
+require("catppuccin").setup({
+	flavour = "mocha",
+	color_overrides = {
+		mocha = {
+			base = "#1a1025",
+			mantle = "#150a1a",
+			crust = "#0f0815",
+			surface0 = "#2a1f35",
+			surface1 = "#3a2f45",
+			surface2 = "#4a3f55",
+			overlay0 = "#685878",
+			overlay1 = "#807090",
+			overlay2 = "#9890a8",
+			text = "#e8e0f0",
+			subtext0 = "#b8b0c8",
+			subtext1 = "#d0c8e0",
+			pink = "#e84a9c",
+			mauve = "#bb7dcf",
+			red = "#ff6b9d",
+			maroon = "#e87090",
+			peach = "#f0a080",
+			yellow = "#ffe066",
+			green = "#7de8b0",
+			teal = "#70d8d0",
+			sky = "#7dcfff",
+			sapphire = "#70b8f0",
+			blue = "#7db8ff",
+			lavender = "#c8a0f0",
+		},
+	},
+})	
 vim.cmd.colorscheme  "catppuccin"
 
 
