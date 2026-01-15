@@ -63,6 +63,8 @@ ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
 | `hyprlock` | Lock screen |
 | `hyprpaper` | Wallpaper |
 | `hyprshot` | Screenshots |
+| `zsh` | Shell |
+| `git` | For plugin installation |
 
 ### Optional
 
@@ -85,7 +87,7 @@ ln -sf $(pwd)/zsh/.zshrc ~/.zshrc
 
 ```bash
 # Required
-paru -S hyprland waybar kitty wofi swaync hypridle hyprlock hyprpaper hyprshot
+paru -S hyprland waybar kitty wofi swaync hypridle hyprlock hyprpaper hyprshot zsh git
 
 # Optional
 paru -S yazi fzf playerctl brightnessctl power-profiles-daemon mpd
@@ -98,7 +100,22 @@ paru -S ttf-jetbrains-mono-nerd ttf-cascadia-code-nerd
 
 1. **Wallpaper**: Place your wallpaper at `~/.config/backgrounds/shaded.png`
 2. **Avatar** (optional): Place your avatar at `~/.face` for the lock screen
-3. **Log out** and select Hyprland from your display manager
+3. **Set zsh as default shell** (optional): `chsh -s /bin/zsh`
+4. **Log out** and select Hyprland from your display manager
+
+### Zsh Setup (handled by install.sh)
+
+The install script automatically sets up zsh with:
+- History cache directory (`~/.cache/zsh/`)
+- [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) plugin
+
+If you installed manually, run:
+```bash
+mkdir -p ~/.cache/zsh
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.zsh/fast-syntax-highlighting
+```
+
+Features: vim mode (`bindkey -v`), tab completion with vim keys, syntax highlighting.
 
 ## Keybindings
 

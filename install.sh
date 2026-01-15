@@ -85,6 +85,31 @@ create_background_dir() {
     fi
 }
 
+setup_zsh() {
+    info "Setting up zsh..."
+
+    # Create zsh cache directory for history
+    local zsh_cache="$HOME/.cache/zsh"
+    if [[ ! -d "$zsh_cache" ]]; then
+        mkdir -p "$zsh_cache"
+        success "Created $zsh_cache"
+    fi
+
+    # Install fast-syntax-highlighting plugin
+    local fsh_dir="$HOME/.zsh/fast-syntax-highlighting"
+    if [[ ! -d "$fsh_dir" ]]; then
+        info "Installing fast-syntax-highlighting plugin..."
+        mkdir -p "$HOME/.zsh"
+        if git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$fsh_dir" 2>/dev/null; then
+            success "Installed fast-syntax-highlighting"
+        else
+            warn "Failed to clone fast-syntax-highlighting (no internet?)"
+        fi
+    else
+        success "fast-syntax-highlighting already installed"
+    fi
+}
+
 check_dependencies() {
     info "Checking dependencies..."
 
@@ -150,6 +175,9 @@ main() {
     echo
 
     create_background_dir
+    echo
+
+    setup_zsh
 
     print_post_install
 }
