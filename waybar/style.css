@@ -1,0 +1,255 @@
+/* Subtle Cyberpink Waybar Theme */
+
+@define-color pink #e84a9c;
+@define-color cyan #7dcfff;
+@define-color mauve #bb7dcf;
+@define-color red #ff6b9d;
+@define-color green #7de8b0;
+@define-color yellow #ffe066;
+@define-color blue #7db8ff;
+@define-color text #e8e0f0;
+@define-color subtext #d0c8e0;
+@define-color overlay #685878;
+@define-color surface2 #4a3f55;
+@define-color surface1 #3a2f45;
+@define-color surface0 #2a1f35;
+@define-color base #1a1025;
+@define-color mantle #150a1a;
+@define-color crust #0f0815;
+
+* {
+    font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+
+window#waybar.hidden {
+    opacity: 0.5;
+}
+
+#waybar > box {
+    margin: 5px 10px 0 10px;
+    background: alpha(@base, 0.9);
+    border: 2px solid @pink;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+/* Modules */
+#workspaces,
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#idle_inhibitor,
+#mpd,
+#power-profiles-daemon,
+#custom-power {
+    padding: 0 10px;
+    margin: 3px 2px;
+    border-radius: 6px;
+    background: transparent;
+    color: @text;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 8px;
+    margin: 3px 2px;
+    background: transparent;
+    color: @subtext;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    color: @pink;
+}
+
+#workspaces button.active {
+    background: @pink;
+    color: @base;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: @red;
+    color: @base;
+}
+
+/* Window title */
+#window {
+    color: @cyan;
+    font-weight: bold;
+}
+
+/* Clock */
+#clock {
+    color: @mauve;
+    font-weight: bold;
+}
+
+/* Battery */
+#battery {
+    color: @green;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    background: @red;
+    color: @base;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+        color: @red;
+    }
+}
+
+/* Network */
+#network {
+    color: @cyan;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    color: @mauve;
+}
+
+#pulseaudio.muted {
+    color: @overlay;
+}
+
+/* CPU */
+#cpu {
+    color: @pink;
+}
+
+/* Memory */
+#memory {
+    color: @blue;
+}
+
+/* Temperature */
+#temperature {
+    color: @cyan;
+}
+
+#temperature.critical {
+    background: @red;
+    color: @base;
+}
+
+/* Backlight */
+#backlight {
+    color: @yellow;
+}
+
+/* Tray */
+#tray {
+    margin-right: 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @red;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+    color: @overlay;
+}
+
+#idle_inhibitor.activated {
+    color: @pink;
+}
+
+/* Power profiles */
+#power-profiles-daemon {
+    color: @green;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+}
+
+#power-profiles-daemon.balanced {
+    color: @blue;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green;
+}
+
+/* MPD */
+#mpd {
+    color: @pink;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+    color: @overlay;
+}
+
+/* Power button */
+#custom-power {
+    color: @red;
+    padding-right: 15px;
+}
+
+#custom-power:hover {
+    background: @red;
+    color: @base;
+    border-radius: 6px;
+}
+
+/* Keyboard state */
+#keyboard-state {
+    color: @subtext;
+}
+
+#keyboard-state > label.locked {
+    color: @pink;
+}
+
+/* Tooltip */
+tooltip {
+    background: @base;
+    border: 2px solid @pink;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 5px;
+}

@@ -1,55 +1,44 @@
-@define-color	rosewater  #f5e0dc;
-@define-color	rosewater-rgb  rgb(245, 224, 220);
-@define-color	flamingo  #f2cdcd;
-@define-color	flamingo-rgb  rgb(242, 205, 205);
-@define-color	pink  #f5c2e7;
-@define-color	pink-rgb  rgb(245, 194, 231);
-@define-color	mauve  #cba6f7;
-@define-color	mauve-rgb  rgb(203, 166, 247);
-@define-color	red  #f38ba8;
-@define-color	red-rgb  rgb(243, 139, 168);
-@define-color	maroon  #eba0ac;
-@define-color	maroon-rgb  rgb(235, 160, 172);
-@define-color	peach  #fab387;
-@define-color	peach-rgb  rgb(250, 179, 135);
-@define-color	yellow  #f9e2af;
-@define-color	yellow-rgb  rgb(249, 226, 175);
-@define-color	green  #a6e3a1;
-@define-color	green-rgb  rgb(166, 227, 161);
-@define-color	teal  #94e2d5;
-@define-color	teal-rgb  rgb(148, 226, 213);
-@define-color	sky  #89dceb;
-@define-color	sky-rgb  rgb(137, 220, 235);
-@define-color	sapphire  #74c7ec;
-@define-color	sapphire-rgb  rgb(116, 199, 236);
-@define-color	blue  #89b4fa;
-@define-color	blue-rgb  rgb(137, 180, 250);
-@define-color	lavender  #b4befe;
-@define-color	lavender-rgb  rgb(180, 190, 254);
-@define-color	text  #cdd6f4;
-@define-color	text-rgb  rgb(205, 214, 244);
-@define-color	subtext1  #bac2de;
-@define-color	subtext1-rgb  rgb(186, 194, 222);
-@define-color	subtext0  #a6adc8;
-@define-color	subtext0-rgb  rgb(166, 173, 200);
-@define-color	overlay2  #9399b2;
-@define-color	overlay2-rgb  rgb(147, 153, 178);
-@define-color	overlay1  #7f849c;
-@define-color	overlay1-rgb  rgb(127, 132, 156);
-@define-color	overlay0  #6c7086;
-@define-color	overlay0-rgb  rgb(108, 112, 134);
-@define-color	surface2  #585b70;
-@define-color	surface2-rgb  rgb(88, 91, 112);
-@define-color	surface1  #45475a;
-@define-color	surface1-rgb  rgb(69, 71, 90);
-@define-color	surface0  #313244;
-@define-color	surface0-rgb  rgb(49, 50, 68);
-@define-color	base  #1e1e2e;
-@define-color	base-rgb  rgb(30, 30, 46);
-@define-color	mantle  #181825;
-@define-color	mantle-rgb  rgb(24, 24, 37);
-@define-color	crust  #11111b;
-@define-color	crust-rgb  rgb(17, 17, 27);
+/* Subtle Cyberpink Theme */
+@define-color pink #e84a9c;
+@define-color pink-rgb rgb(232, 74, 156);
+@define-color cyan #7dcfff;
+@define-color cyan-rgb rgb(125, 207, 255);
+@define-color mauve #bb7dcf;
+@define-color mauve-rgb rgb(187, 125, 207);
+@define-color red #ff6b9d;
+@define-color red-rgb rgb(255, 107, 157);
+@define-color green #7de8b0;
+@define-color green-rgb rgb(125, 232, 176);
+@define-color yellow #ffe066;
+@define-color yellow-rgb rgb(255, 224, 102);
+@define-color blue #7db8ff;
+@define-color blue-rgb rgb(125, 184, 255);
+@define-color lavender #c8a0f0;
+@define-color lavender-rgb rgb(200, 160, 240);
+@define-color text #e8e0f0;
+@define-color text-rgb rgb(232, 224, 240);
+@define-color subtext1 #d0c8e0;
+@define-color subtext1-rgb rgb(208, 200, 224);
+@define-color subtext0 #b8b0c8;
+@define-color subtext0-rgb rgb(184, 176, 200);
+@define-color overlay2 #9890a8;
+@define-color overlay2-rgb rgb(152, 144, 168);
+@define-color overlay1 #807090;
+@define-color overlay1-rgb rgb(128, 112, 144);
+@define-color overlay0 #685878;
+@define-color overlay0-rgb rgb(104, 88, 120);
+@define-color surface2 #4a3f55;
+@define-color surface2-rgb rgb(74, 63, 85);
+@define-color surface1 #3a2f45;
+@define-color surface1-rgb rgb(58, 47, 69);
+@define-color surface0 #2a1f35;
+@define-color surface0-rgb rgb(42, 31, 53);
+@define-color base #1a1025;
+@define-color base-rgb rgb(26, 16, 37);
+@define-color mantle #150a1a;
+@define-color mantle-rgb rgb(21, 10, 26);
+@define-color crust #0f0815;
+@define-color crust-rgb rgb(15, 8, 21);
 
 * {
   font-family: 'CaskaydiaCove Nerd Font', monospace;
@@ -60,7 +49,7 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @lavender;
+  border: 2px solid @pink;
   border-radius: 8px;
   background-color: @base;
 }
@@ -96,16 +85,16 @@ window {
   border: none;
   border-radius: 0.1em;
   color: @text;
-  background-color: @base;
+  background-color: @surface0;
 }
 
 #input image {
     border: none;
-    color: @red;
+    color: @pink;
 }
 
 #input * {
-  outline: 4px solid @red!important;
+  outline: 4px solid @pink!important;
 }
 
 /* Text */
@@ -121,18 +110,19 @@ window {
 
 #entry arrow {
   border: none;
-  color: @lavender;
+  color: @cyan;
 }
 
 /* Selected Entry */
 #entry:selected {
-  border: 0.11em solid @lavender;
+  border: 0.11em solid @pink;
+  border-radius: 4px;
 }
 
 #entry:selected #text {
-  color: @mauve;
+  color: @pink;
 }
 
 #entry:drop(active) {
-  background-color: @lavender!important;
+  background-color: @pink!important;
 }
