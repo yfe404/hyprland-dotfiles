@@ -24,22 +24,22 @@ opt.rtp:prepend(lazypath)
 
 local plugins = {
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.8', 
+	{ 'nvim-telescope/telescope.nvim',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
-	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+		opts = {
+			ensure_installed = {"lua", "c"},
+			highlight = {enable = true},
+			indent = {enable = true},
+		},
+	},
 }
 
 require("lazy").setup({plugins, {}})
 
 local builtin = require("telescope.builtin")
 
-
-require("nvim-treesitter.configs").setup({
-	ensure_installed = {"lua", "c"},
-	highlight = {enable = true},
-	indent = {enable = true},
-})
 
 require("catppuccin").setup({
 	flavour = "mocha",
