@@ -87,3 +87,6 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 export PATH=$PATH:$HOME/venv/bin
 export PATH=$PATH:$HOME/.local/bin
+
+# npm user-global prefix
+export PATH=~/.npm-global/bin:$PATH
