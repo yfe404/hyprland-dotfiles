@@ -90,3 +90,16 @@ export PATH=$PATH:$HOME/.local/bin
 
 # npm user-global prefix
 export PATH=~/.npm-global/bin:$PATH
+export GPG_TTY=$(tty)
+
+# radare2-mcp launcher for mobile-app-ai-toolkit
+export RADARE2_MCP_CMD="/home/yms/.local/share/radare2/prefix/bin/r2mcp"
+
+# second codex account
+alias codex2="CODEX_HOME=~/.codex-impl codex"
+
+# Machine-local secrets (API tokens etc.) — file lives outside this repo on purpose
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Cyberpink prompt
+command -v starship >/dev/null && eval "$(starship init zsh)"

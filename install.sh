@@ -29,8 +29,13 @@ declare -A CONFIGS=(
     ["nvim"]="$CONFIG_DIR/nvim"
     ["waybar"]="$CONFIG_DIR/waybar"
     ["wofi"]="$CONFIG_DIR/wofi"
+    ["swaync"]="$CONFIG_DIR/swaync"
+    ["theme"]="$CONFIG_DIR/theme"
+    ["fastfetch"]="$CONFIG_DIR/fastfetch"
     ["zsh/.zshrc"]="$HOME/.zshrc"
-    ["hyprmocha"]="$CONFIG_DIR/hyprmocha"
+    ["tmux/.tmux.conf"]="$HOME/.tmux.conf"
+    ["starship/starship.toml"]="$CONFIG_DIR/starship.toml"
+    ["gtk/gtk.css"]="$CONFIG_DIR/gtk-3.0/gtk.css"
 )
 
 backup_if_exists() {
@@ -149,7 +154,13 @@ print_post_install() {
     echo "  1. Add a wallpaper to ~/.config/backgrounds/shaded.png"
     echo "  2. Add an avatar image to ~/.face (optional, for lock screen)"
     echo "  3. Install required fonts: JetBrainsMono Nerd Font, Caskaydia Cove Nerd Font"
-    echo "  4. Log out and select Hyprland from your display manager"
+    echo "  4. Install starship (prompt): pacman -S starship, or the official install.sh"
+    echo "  5. GTK theme: pacman -S adw-gtk-theme, then:"
+    echo "     gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'"
+    echo "     gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+    echo "     gsettings set org.gnome.desktop.interface accent-color 'pink'"
+    echo "  6. Machine-local secrets go in ~/.zshrc.local (sourced by .zshrc, never committed)"
+    echo "  7. Log out and select Hyprland from your display manager"
     echo
     echo "For transmission scripts (tadd, tdel, tlist), set these env vars:"
     echo "  export TRANSMISSION_HOST='your-server:9091'"
@@ -169,6 +180,8 @@ main() {
     for source in "${!CONFIGS[@]}"; do
         create_symlink "$DOTFILES_DIR/$source" "${CONFIGS[$source]}"
     done
+    # same override file serves GTK4 apps
+    create_symlink "$DOTFILES_DIR/gtk/gtk.css" "$CONFIG_DIR/gtk-4.0/gtk.css"
     echo
 
     install_bin_scripts
