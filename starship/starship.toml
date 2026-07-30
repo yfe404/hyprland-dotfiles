@@ -1,0 +1,66 @@
+# Subtle Cyberpink starship prompt
+# Palette hexes mirror theme/cyberpink.css
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "cyberpink"
+
+format = """
+$directory$git_branch$git_status$python$nodejs$rust$cmd_duration
+$character"""
+
+add_newline = true
+
+[palettes.cyberpink]
+pink = "#e84a9c"
+mauve = "#bb7dcf"
+red = "#ff6b9d"
+green = "#7de8b0"
+yellow = "#ffe066"
+sky = "#7dcfff"
+blue = "#7db8ff"
+lavender = "#c8a0f0"
+text = "#e8e0f0"
+subtext = "#d0c8e0"
+overlay = "#685878"
+surface = "#2a1f35"
+
+[directory]
+style = "bold pink"
+truncation_length = 4
+truncate_to_repo = true
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+style = "bold mauve"
+format = "on [$symbol$branch(:$remote_branch)]($style) "
+
+[git_status]
+style = "red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[python]
+symbol = " "
+style = "sky"
+format = 'via [$symbol$pyenv_prefix($version )(\($virtualenv\) )]($style)'
+
+[nodejs]
+symbol = " "
+style = "green"
+format = "via [$symbol($version )]($style)"
+
+[rust]
+symbol = "󱘗 "
+style = "red"
+format = "via [$symbol($version )]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "yellow"
+format = "took [$duration]($style) "
+
+[character]
+success_symbol = "[❯](bold pink)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold mauve)"
