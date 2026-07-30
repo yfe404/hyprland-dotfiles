@@ -1,44 +1,5 @@
-/* Subtle Cyberpink Theme */
-@define-color pink #e84a9c;
-@define-color pink-rgb rgb(232, 74, 156);
-@define-color cyan #7dcfff;
-@define-color cyan-rgb rgb(125, 207, 255);
-@define-color mauve #bb7dcf;
-@define-color mauve-rgb rgb(187, 125, 207);
-@define-color red #ff6b9d;
-@define-color red-rgb rgb(255, 107, 157);
-@define-color green #7de8b0;
-@define-color green-rgb rgb(125, 232, 176);
-@define-color yellow #ffe066;
-@define-color yellow-rgb rgb(255, 224, 102);
-@define-color blue #7db8ff;
-@define-color blue-rgb rgb(125, 184, 255);
-@define-color lavender #c8a0f0;
-@define-color lavender-rgb rgb(200, 160, 240);
-@define-color text #e8e0f0;
-@define-color text-rgb rgb(232, 224, 240);
-@define-color subtext1 #d0c8e0;
-@define-color subtext1-rgb rgb(208, 200, 224);
-@define-color subtext0 #b8b0c8;
-@define-color subtext0-rgb rgb(184, 176, 200);
-@define-color overlay2 #9890a8;
-@define-color overlay2-rgb rgb(152, 144, 168);
-@define-color overlay1 #807090;
-@define-color overlay1-rgb rgb(128, 112, 144);
-@define-color overlay0 #685878;
-@define-color overlay0-rgb rgb(104, 88, 120);
-@define-color surface2 #4a3f55;
-@define-color surface2-rgb rgb(74, 63, 85);
-@define-color surface1 #3a2f45;
-@define-color surface1-rgb rgb(58, 47, 69);
-@define-color surface0 #2a1f35;
-@define-color surface0-rgb rgb(42, 31, 53);
-@define-color base #1a1025;
-@define-color base-rgb rgb(26, 16, 37);
-@define-color mantle #150a1a;
-@define-color mantle-rgb rgb(21, 10, 26);
-@define-color crust #0f0815;
-@define-color crust-rgb rgb(15, 8, 21);
+/* Subtle Cyberpink Theme — palette lives in theme/cyberpink.css */
+@import url("../theme/cyberpink.css");
 
 * {
   font-family: 'CaskaydiaCove Nerd Font', monospace;
@@ -94,7 +55,7 @@ window {
 }
 
 #input * {
-  outline: 4px solid @pink!important;
+  outline: 4px solid @pink;
 }
 
 /* Text */
@@ -124,5 +85,5 @@ window {
 }
 
 #entry:drop(active) {
-  background-color: @pink!important;
+  background-color: @pink;
 }

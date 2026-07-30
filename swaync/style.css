@@ -1,0 +1,111 @@
+/* Subtle Cyberpink swaync — palette lives in theme/cyberpink.css */
+@import url("../theme/cyberpink.css");
+
+* {
+  font-family: "CaskaydiaCove Nerd Font", sans-serif;
+  font-size: 13px;
+}
+
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification {
+  background: alpha(@base, 0.95);
+  border: 2px solid @pink;
+  border-radius: 10px;
+  margin: 6px 10px;
+  box-shadow: none;
+  padding: 0;
+}
+
+.notification-content {
+  background: transparent;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.notification-default-action,
+.notification-action {
+  background: transparent;
+  border: none;
+  color: @text;
+}
+
+.notification-action:hover {
+  background: @surface1;
+  color: @pink;
+}
+
+.close-button {
+  background: @surface1;
+  color: @red;
+  border-radius: 8px;
+  margin: 6px;
+  padding: 2px;
+}
+
+.close-button:hover {
+  background: @red;
+  color: @base;
+}
+
+.summary {
+  color: @pink;
+  font-weight: bold;
+}
+
+.body {
+  color: @text;
+}
+
+.time {
+  color: @subtext0;
+}
+
+/* Control center */
+.control-center {
+  background: alpha(@base, 0.95);
+  border: 2px solid @pink;
+  border-radius: 12px;
+  margin: 8px;
+  padding: 8px;
+}
+
+.control-center .notification {
+  border: 1px solid @surface2;
+}
+
+.widget-title {
+  color: @mauve;
+  font-weight: bold;
+  margin: 6px;
+}
+
+.widget-title > button {
+  background: @surface1;
+  color: @pink;
+  border: none;
+  border-radius: 6px;
+}
+
+.widget-title > button:hover {
+  background: @pink;
+  color: @base;
+}
+
+.widget-dnd {
+  color: @text;
+  margin: 6px;
+}
+
+.widget-dnd > switch {
+  background: @surface1;
+  border-radius: 10px;
+}
+
+.widget-dnd > switch:checked {
+  background: @pink;
+}

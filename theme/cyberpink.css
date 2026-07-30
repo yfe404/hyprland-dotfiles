@@ -1,0 +1,36 @@
+/* Subtle Cyberpink — single source of truth (GTK CSS)
+ * Imported by waybar, wofi, swaync. Hypr-format twin: hypr/cyberpink.conf */
+
+@define-color rosewater #f0d0e8;
+@define-color flamingo #e8a0c8;
+@define-color pink #e84a9c;
+@define-color mauve #bb7dcf;
+@define-color red #ff6b9d;
+@define-color maroon #e87090;
+@define-color peach #f0a080;
+@define-color yellow #ffe066;
+@define-color green #7de8b0;
+@define-color teal #70d8d0;
+@define-color sky #7dcfff;
+@define-color cyan #7dcfff;
+@define-color sapphire #70b8f0;
+@define-color blue #7db8ff;
+@define-color lavender #c8a0f0;
+
+@define-color text #e8e0f0;
+@define-color subtext1 #d0c8e0;
+@define-color subtext0 #b8b0c8;
+@define-color subtext #d0c8e0;
+
+@define-color overlay2 #9890a8;
+@define-color overlay1 #807090;
+@define-color overlay0 #685878;
+@define-color overlay #685878;
+
+@define-color surface2 #4a3f55;
+@define-color surface1 #3a2f45;
+@define-color surface0 #2a1f35;
+
+@define-color base #1a1025;
+@define-color mantle #150a1a;
+@define-color crust #0f0815;
