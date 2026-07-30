@@ -1,0 +1,9 @@
+/* Subtle Cyberpink GTK overrides — symlinked to gtk-3.0/gtk.css and gtk-4.0/gtk.css.
+ * Pins the accent to the exact palette pink (theme/cyberpink.css). */
+
+@define-color accent_color #e84a9c;
+@define-color accent_bg_color #e84a9c;
+@define-color accent_fg_color #1a1025;
+
+@define-color theme_selected_bg_color #e84a9c;
+@define-color theme_selected_fg_color #1a1025;
