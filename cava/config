@@ -4,6 +4,12 @@
 framerate = 60
 autosens = 1
 
+[input]
+# audio actually plays through the HDMI sink, not the "default" analog one
+# (find yours: pactl list sinks short — append .monitor)
+method = pulse
+source = alsa_output.pci-0000_c3_00.1.hdmi-stereo.monitor
+
 [color]
 gradient = 1
 gradient_count = 5
