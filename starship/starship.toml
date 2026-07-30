@@ -6,10 +6,21 @@
 palette = "cyberpink"
 
 format = """
-$directory$git_branch$git_status$python$nodejs$rust$cmd_duration
-$character"""
+[╭─](overlay)$username[@](subtext)$hostname $directory$git_branch$git_status$python$nodejs$rust$cmd_duration
+[╰─](overlay)$character"""
 
 add_newline = true
+
+[username]
+show_always = true
+style_user = "bold mauve"
+style_root = "bold red"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold sky"
+format = "[$hostname]($style)"
 
 [palettes.cyberpink]
 pink = "#e84a9c"
