@@ -1,0 +1,18 @@
+# Subtle Cyberpink cava — hexes mirror theme/cyberpink.css
+
+[general]
+framerate = 60
+autosens = 1
+
+[color]
+gradient = 1
+gradient_count = 5
+# bottom -> top: pink -> mauve -> lavender -> blue -> sky
+gradient_color_1 = '#e84a9c'
+gradient_color_2 = '#bb7dcf'
+gradient_color_3 = '#c8a0f0'
+gradient_color_4 = '#7db8ff'
+gradient_color_5 = '#7dcfff'
+
+[smoothing]
+noise_reduction = 77

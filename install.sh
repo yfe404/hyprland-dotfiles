@@ -35,6 +35,7 @@ declare -A CONFIGS=(
     ["zsh/.zshrc"]="$HOME/.zshrc"
     ["tmux/.tmux.conf"]="$HOME/.tmux.conf"
     ["starship/starship.toml"]="$CONFIG_DIR/starship.toml"
+    ["cava/config"]="$CONFIG_DIR/cava/config"
     ["gtk/gtk.css"]="$CONFIG_DIR/gtk-3.0/gtk.css"
 )
 
