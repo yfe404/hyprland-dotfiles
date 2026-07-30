@@ -1,9 +1,9 @@
-# Subtle Cyberpink starship prompt
-# Palette hexes mirror theme/cyberpink.css
+# Ghost in the Shell (1995) starship prompt
+# Palette hexes mirror theme/palette.css
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "cyberpink"
+palette = "gits95"
 
 format = """
 [╭─](overlay)$username[@](subtext)$hostname $directory$git_branch$git_status$python$nodejs$rust$cmd_duration
@@ -22,19 +22,19 @@ ssh_only = false
 style = "bold sky"
 format = "[$hostname]($style)"
 
-[palettes.cyberpink]
-pink = "#e84a9c"
-mauve = "#bb7dcf"
-red = "#ff6b9d"
-green = "#7de8b0"
-yellow = "#ffe066"
-sky = "#7dcfff"
-blue = "#7db8ff"
-lavender = "#c8a0f0"
-text = "#e8e0f0"
-subtext = "#d0c8e0"
-overlay = "#685878"
-surface = "#2a1f35"
+[palettes.gits95]
+pink = "#7af0c8"
+mauve = "#8a76b8"
+red = "#ff5f6d"
+green = "#66e0a3"
+yellow = "#ffd27a"
+sky = "#5ecfdc"
+blue = "#6aaede"
+lavender = "#a292cc"
+text = "#d2e8dc"
+subtext = "#b4ccc0"
+overlay = "#4a6456"
+surface = "#16221c"
 
 [directory]
 style = "bold pink"

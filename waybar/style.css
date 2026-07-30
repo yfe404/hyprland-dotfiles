@@ -1,5 +1,5 @@
-/* Subtle Cyberpink Waybar Theme — palette lives in theme/cyberpink.css */
-@import url("../theme/cyberpink.css");
+/* Waybar theme — palette lives in theme/palette.css */
+@import url("../theme/palette.css");
 
 * {
     font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free";

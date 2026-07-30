@@ -1,5 +1,5 @@
-/* Subtle Cyberpink swaync — palette lives in theme/cyberpink.css */
-@import url("../theme/cyberpink.css");
+/* swaync theme — palette lives in theme/palette.css */
+@import url("../theme/palette.css");
 
 * {
   font-family: "CaskaydiaCove Nerd Font", sans-serif;

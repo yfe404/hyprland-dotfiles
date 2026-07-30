@@ -1,0 +1,40 @@
+/* ACTIVE THEME: gits95 — Ghost in the Shell (1995) — single source of truth (GTK CSS)
+ * Imported by waybar, wofi, swaync. Hypr-format twin: hypr/palette.conf
+ * Slot semantics (catppuccin-style names, values re-skinned):
+ *   pink  = primary accent (phosphor green)   peach = amber neon
+ *   mauve = Major purple                      teal/sky/cyan = pale cyans
+ * Previous theme kept for reference: theme/cyberpink.css */
+
+@define-color rosewater #d8ecdf;
+@define-color flamingo #b8dcc8;
+@define-color pink #7af0c8;
+@define-color mauve #8a76b8;
+@define-color red #ff5f6d;
+@define-color maroon #e0707e;
+@define-color peach #ffb454;
+@define-color yellow #ffd27a;
+@define-color green #66e0a3;
+@define-color teal #4dd8c0;
+@define-color sky #5ecfdc;
+@define-color cyan #5ecfdc;
+@define-color sapphire #4aa8c0;
+@define-color blue #6aaede;
+@define-color lavender #a292cc;
+
+@define-color text #d2e8dc;
+@define-color subtext1 #b4ccc0;
+@define-color subtext0 #96b0a4;
+@define-color subtext #b4ccc0;
+
+@define-color overlay2 #7a9488;
+@define-color overlay1 #5f7a6e;
+@define-color overlay0 #4a6456;
+@define-color overlay #4a6456;
+
+@define-color surface2 #2c3f36;
+@define-color surface1 #20302a;
+@define-color surface0 #16221c;
+
+@define-color base #0b1210;
+@define-color mantle #080e0b;
+@define-color crust #050a08;
